@@ -3,7 +3,7 @@ version: '3.7'
 services:
 
   vosviewer:
-    image: vosviewer
+    image: ghcr.io/kth-library/vosviewer-docker
     ports:
       - "8080:80"
     volumes:
