@@ -1,11 +1,13 @@
 #! make
 
-build:
+build-init:
 	test -d VOSviewer-Online || git clone --depth=1 https://github.com/neesjanvaneck/VOSviewer-Online.git && \
 		cd VOSviewer-Online && \
 			sed -i "s|publicPath: env.dev ? '/' : undefined,|publicPath: env.dev ? '/vosviewer/' : undefined,|g" webpack.config.babel.js && \
 			sed -i "s|to: absolute('dist', bundleName, 'images/|to: absolute('dist', bundleName, 'vosviewer-online/images/|g" webpack.config.babel.js && \
 			cp -r data ..
+
+build:
 	docker build -t vosviewer .
 
 test:
