@@ -8,4 +8,7 @@ Required tools are `git`, `make`, `sed` and `docker` or `podman`.
 
 Use the `Makefile` to build, test and run services.
 
+## Screenshot
+
+![](vosviewer-docker-screenshot.png)
 
